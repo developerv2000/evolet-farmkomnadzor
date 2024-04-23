@@ -15,7 +15,9 @@ class MainController extends Controller
             app()->setLocale($lang);
         }
 
-        return view('index');
+        $appLocale = app()->getLocale();
+
+        return view('index', compact('appLocale'));
     }
 
     public function report()
