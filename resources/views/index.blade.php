@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="pharmacovigilance" lang="{{ $appLocale }}">
+<html class="supervision-html" lang="{{ $appLocale }}">
 
 <head>
     <meta charset="UTF-8">
@@ -8,14 +8,7 @@
     <title>{{ __('Pharmacovigilance') }}</title>
 
     <style>
-        .pharmacovigilance {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        .pharmacovigilance body {
+        .supervision-html body {
             margin: 0;
         }
     </style>
@@ -128,6 +121,19 @@
         </div>
     </div>
 
+    <script>
+        window.addEventListener('load', (evt) => {
+            resizeSupervisionIframeHeight();
+        });
+
+        window.parent.addEventListener('load', (evt) => {
+            resizeSupervisionIframeHeight();
+        });
+
+        function resizeSupervisionIframeHeight() {
+            document.querySelector('iframe').style.height = '800px';
+        }
+    </script>
 </body>
 
 </html>
