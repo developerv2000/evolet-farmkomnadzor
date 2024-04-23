@@ -37,7 +37,7 @@
         <h3 class="supervision__form-title">{{ __('Online submission') }}:</h3>
         <p class="supervision__form-notes">{!! __('app.form_notes') !!}</p>
 
-        <form class="supervision__form" action="{{ route('report') }}" method="POST">
+        <form class="supervision__form" action="{{ route('report') }}" method="POST" onsubmit="window.parent.location.reload();">
             @csrf
 
             <div class="form-group">
@@ -61,27 +61,27 @@
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-event">{{ __('Adverse event') }} <span class="required">*</span></label>
+                <label class="label" for="supervision-event">{{ __('Adverse event') }} <span class="required" required>*</span></label>
                 <input type="text" id="supervision-event" name="event">
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-drugs">{{ __('Suspect drugs') }} <span class="required">*</span></label>
+                <label class="label" for="supervision-drugs">{{ __('Suspect drugs') }} <span class="required" required>*</span></label>
                 <input type="text" id="supervision-drugs" name="drugs">
             </div>
 
             <div class="form-group">
-                <label class="label" for="reporter-name">{{ __('Name of the reporter') }} <span class="required">*</span></label>
+                <label class="label" for="reporter-name">{{ __('Name of the reporter') }} <span class="required" required>*</span></label>
                 <input type="text" id="reporter-name" name="reporter_name">
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-email">{{ __('Email ID of the reporter') }} <span class="required">*</span></label>
+                <label class="label" for="supervision-email">{{ __('Email ID of the reporter') }} <span class="required" required>*</span></label>
                 <input type="text" id="supervision-email" name="email">
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-phone">{{ __('Telephone/Cell number of the reporter') }} <span class="required">*</span></label>
+                <label class="label" for="supervision-phone">{{ __('Telephone/Cell number of the reporter') }} <span class="required" required>*</span></label>
                 <input type="text" id="supervision-phone" name="phone">
             </div>
 
