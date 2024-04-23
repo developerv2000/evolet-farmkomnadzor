@@ -120,20 +120,6 @@
             <p>{{ __('app.confidence_block_2') }}</p>
         </div>
     </div>
-
-    <script>
-        window.addEventListener('load', (evt) => {
-            resizeSupervisionIframeHeight();
-        });
-
-        window.parent.addEventListener('load', (evt) => {
-            resizeSupervisionIframeHeight();
-        });
-
-        function resizeSupervisionIframeHeight() {
-            document.querySelector('iframe').style.height = '800px';
-        }
-    </script>
 </body>
 
 </html>

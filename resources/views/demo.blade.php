@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+    <iframe id="pharmacovigilance-iframe" src="https://farmkomnadzor.spey.tj/?lang=ru" frameborder="0" scrolling="no" style="width: 100%; height: 100%; border: 0"></iframe>
 </body>
 
 </html>
