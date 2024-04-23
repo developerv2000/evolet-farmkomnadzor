@@ -17,4 +17,9 @@ class MainController extends Controller
 
         return view('index');
     }
+
+    public function report()
+    {
+        return to_route('index');
+    }
 }

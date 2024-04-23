@@ -61,28 +61,28 @@
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-event">{{ __('Adverse event') }} <span class="required" required>*</span></label>
-                <input type="text" id="supervision-event" name="event">
+                <label class="label" for="supervision-event">{{ __('Adverse event') }} <span class="required">*</span></label>
+                <input type="text" id="supervision-event" name="event" required>
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-drugs">{{ __('Suspect drugs') }} <span class="required" required>*</span></label>
-                <input type="text" id="supervision-drugs" name="drugs">
+                <label class="label" for="supervision-drugs">{{ __('Suspect drugs') }} <span class="required">*</span></label>
+                <input type="text" id="supervision-drugs" name="drugs" required>
             </div>
 
             <div class="form-group">
-                <label class="label" for="reporter-name">{{ __('Name of the reporter') }} <span class="required" required>*</span></label>
-                <input type="text" id="reporter-name" name="reporter_name">
+                <label class="label" for="reporter-name">{{ __('Name of the reporter') }} <span class="required">*</span></label>
+                <input type="text" id="reporter-name" name="reporter_name" required>
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-email">{{ __('Email ID of the reporter') }} <span class="required" required>*</span></label>
-                <input type="text" id="supervision-email" name="email">
+                <label class="label" for="supervision-email">{{ __('Email ID of the reporter') }} <span class="required">*</span></label>
+                <input type="text" id="supervision-email" name="email" required>
             </div>
 
             <div class="form-group">
-                <label class="label" for="supervision-phone">{{ __('Telephone/Cell number of the reporter') }} <span class="required" required>*</span></label>
-                <input type="text" id="supervision-phone" name="phone">
+                <label class="label" for="supervision-phone">{{ __('Telephone/Cell number of the reporter') }} <span class="required">*</span></label>
+                <input type="text" id="supervision-phone" name="phone" required>
             </div>
 
             <button class="button supervision__submit" type="submit">{{ __('Send') }}</button>
