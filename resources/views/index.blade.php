@@ -123,7 +123,7 @@
 
     <script>
         window.addEventListener('load', (evt) => {
-            let body = window.querySelector('body');
+            let body = document.querySelector('body');
             console.log(body);
         });
     </script>
