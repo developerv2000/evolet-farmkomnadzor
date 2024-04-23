@@ -120,6 +120,13 @@
             <p>{{ __('app.confidence_block_2') }}</p>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', (evt) => {
+            let body = window.querySelector('body');
+            console.log(body);
+        });
+    </script>
 </body>
 
 </html>
