@@ -1,4 +1,4 @@
-<p>От: {{ $request->reporter_name }} <{{ $request->email }}></p>
+<p>От: {{ $request->reporter_name }} &lt;{{ $request->reporter_email }}&gt;</p>
 <p>Тема: Сообщение о жалобе на продукт</p>
 <br>
 <p>Сообщение:</p>

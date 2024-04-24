@@ -75,7 +75,7 @@
 
             <div class="form-group">
                 <label class="label" for="supervision-email">{{ __('Email ID of the reporter') }} <span class="required">*</span></label>
-                <input type="email" id="supervision-email" name="email" required>
+                <input type="email" id="supervision-email" name="reporter_email" required>
             </div>
 
             <div class="form-group">
