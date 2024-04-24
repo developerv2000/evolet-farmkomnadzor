@@ -90,7 +90,7 @@
     <div class="supervision__text">
         <p>
             {{ __('Нажмите, чтобы загрузить') }}
-            <a href="{{ '/forms/' . $appLocale . '.docx') }}">{{ __('Adverse Event Reporting Form') }}</a>
+            <a href="{{ '/forms/' . $appLocale . '.docx' }}">{{ __('Adverse Event Reporting Form') }}</a>
             {{ __('for detailed reporting') }}.
         </p>
 
