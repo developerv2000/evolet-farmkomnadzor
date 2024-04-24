@@ -19,8 +19,9 @@ class ApiController extends Controller
         }
 
         $appLocale = app()->getLocale();
+        $redirectUrl = $request->redirect_url;
 
-        return view('index', compact('appLocale'))->render();
+        return view('index', compact('appLocale', 'redirectUrl'))->render();
     }
 
     public function supervisionReport(Request $request)
@@ -28,14 +29,6 @@ class ApiController extends Controller
         Mail::to('developerv2000@gmail.com')->send(new SupervisionReport($request));
         // Mail::to('drugsafety@evolet.co.uk')->send(new SupervisionReport($request));
 
-        // generate previous url to redirect
-        $refererUrl = $request->headers->get('referer');
-        $parsedUrl = parse_url($refererUrl);
-        $previousUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'];
-        if (isset($parsedUrl['query'])) {
-            $previousUrl .= '?' . $parsedUrl['query'];
-        }
-
-        return redirect($previousUrl);
+        return redirect($request->redirect_url ?: $request->headers->get('referer'));
     }
 }
