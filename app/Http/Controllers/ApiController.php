@@ -25,7 +25,7 @@ class ApiController extends Controller
 
     public function supervisionReport(Request $request)
     {
-        Mail::to('developerv2000@gmail.com')->send(new SupervisionReport($request));
+        Mail::to('drugsafety@evolet.co.uk')->send(new SupervisionReport($request));
         // Mail::to('drugsafety@evolet.co.uk')->send(new SupervisionReport($request));
 
         return redirect($request->redirect_url ?: $request->headers->get('referer'));
