@@ -37,7 +37,7 @@
         <h3 class="supervision__form-title">{{ __('Online submission') }}:</h3>
         <p class="supervision__form-notes">{!! __('app.form_notes') !!}</p>
 
-        <form class="supervision__form" action="{{ secure_url(route('api.supervision-report')) }}" method="POST">
+        <form class="supervision__form" action="https://farmkomnadzor.spey.tj/api/supervision-report" method="POST">
             <div class="form-group">
                 <label class="label" for="patient-initial">{{ __('Patient initials') }} <span class="required">*</span></label>
                 <input class="input" type="text" id="patient-initial" name="patient_initial" required>
