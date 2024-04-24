@@ -1,3 +1,1 @@
 import './bootstrap';
-
-document.querySelector
