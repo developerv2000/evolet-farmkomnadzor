@@ -29,9 +29,12 @@ class ApiController extends Controller
         // Mail::to('drugsafety@evolet.co.uk')->send(new SupervisionReport($request));
 
         // generate previous url to redirect
-        $referrerDomain = $request->headers->get('referer');
-        $requestUri = $request->getRequestUri();
-        $previousUrl = $referrerDomain . $requestUri;
+        $refererUrl = $request->headers->get('referer');
+        $parsedUrl = parse_url($refererUrl);
+        $previousUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'];
+        if (isset($parsedUrl['query'])) {
+            $previousUrl .= '?' . $parsedUrl['query'];
+        }
 
         return redirect($previousUrl);
     }
