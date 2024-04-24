@@ -37,50 +37,50 @@
         <h3 class="supervision__form-title">{{ __('Online submission') }}:</h3>
         <p class="supervision__form-notes">{!! __('app.form_notes') !!}</p>
 
-        <form class="supervision__form" action="{{ route('api.supervision-report') }}" method="POST">
+        <form class="supervision__form" action="{{ secure_url('api.supervision-report') }}" method="POST">
             <div class="form-group">
                 <label class="label" for="patient-initial">{{ __('Patient initials') }} <span class="required">*</span></label>
-                <input type="text" id="patient-initial" name="patient_initial" required>
+                <input class="input" type="text" id="patient-initial" name="patient_initial" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-age">{{ __('Age (Years)') }}</label>
-                <input type="number" max="200" id="supervision-age" name="age" min="1">
+                <input class="input" type="number" max="200" id="supervision-age" name="age" min="1">
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-weight">{{ __('Weight (Kgs)') }}</label>
-                <input type="number" id="supervision-weight" name="weight" min="1">
+                <input class="input" type="number" id="supervision-weight" name="weight" min="1">
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-height">{{ __('Height (Cms)') }}</label>
-                <input type="number" id="supervision-height" name="height" min="1">
+                <input class="input" type="number" id="supervision-height" name="height" min="1">
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-event">{{ __('Adverse event') }} <span class="required">*</span></label>
-                <input type="text" id="supervision-event" name="event" required>
+                <input class="input" type="text" id="supervision-event" name="event" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-drugs">{{ __('Suspect drugs') }} <span class="required">*</span></label>
-                <input type="text" id="supervision-drugs" name="drugs" required>
+                <input class="input" type="text" id="supervision-drugs" name="drugs" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="reporter-name">{{ __('Name of the reporter') }} <span class="required">*</span></label>
-                <input type="text" id="reporter-name" name="reporter_name" required>
+                <input class="input" type="text" id="reporter-name" name="reporter_name" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-email">{{ __('Email ID of the reporter') }} <span class="required">*</span></label>
-                <input type="email" id="supervision-email" name="reporter_email" required>
+                <input class="input" type="email" id="supervision-email" name="reporter_email" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="supervision-phone">{{ __('Telephone/Cell number of the reporter') }} <span class="required">*</span></label>
-                <input type="text" id="supervision-phone" name="phone" required>
+                <input class="input" type="text" id="supervision-phone" name="phone" required>
             </div>
 
             <button class="button supervision__submit" type="submit">{{ __('Send') }}</button>
