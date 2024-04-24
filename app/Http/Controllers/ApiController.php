@@ -28,6 +28,11 @@ class ApiController extends Controller
         Mail::to('developerv2000@gmail.com')->send(new SupervisionReport($request));
         // Mail::to('drugsafety@evolet.co.uk')->send(new SupervisionReport($request));
 
-        return redirect($request->header('referer'));
+        // generate previous url to redirect
+        $referrerDomain = $request->headers->get('referer');
+        $requestUri = $request->getRequestUri();
+        $previousUrl = $referrerDomain . $requestUri;
+
+        return redirect($previousUrl);
     }
 }
