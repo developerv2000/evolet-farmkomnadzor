@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SupervisionReport;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
 
 class ApiController extends Controller
@@ -21,8 +23,10 @@ class ApiController extends Controller
         return view('index', compact('appLocale'))->render();
     }
 
-    public function report()
+    public function supervisionReport(Request $request)
     {
-        return 'Success!';
+        Mail::to('developerv2000@gmail.com')->send(new SupervisionReport($request));
+
+        return redirect($request->header('referer'));
     }
 }

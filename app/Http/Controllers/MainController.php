@@ -6,22 +6,10 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-    public function index(Request $request)
+    public function supervisionReport(Request $request)
     {
-        $availableLanguages = ['en', 'ru'];
-        $lang = $request->lang;
+        Mail::to('developerv2000@gmail.com')->send(new SupervisionReport($request));
 
-        if ($lang && in_array($lang, $availableLanguages)) {
-            app()->setLocale($lang);
-        }
-
-        $appLocale = app()->getLocale();
-
-        return view('index', compact('appLocale'));
-    }
-
-    public function report()
-    {
-        return to_route('index');
+        return redirect($request->header('referer'));
     }
 }

@@ -37,9 +37,7 @@
         <h3 class="supervision__form-title">{{ __('Online submission') }}:</h3>
         <p class="supervision__form-notes">{!! __('app.form_notes') !!}</p>
 
-        <form class="supervision__form" action="{{ route('api.report') }}" method="POST" onsubmit="window.parent.location.reload();">
-            @csrf
-
+        <form class="supervision__form" action="{{ route('api.supervision-report') }}" method="POST">
             <div class="form-group">
                 <label class="label" for="patient-initial">{{ __('Patient initials') }} <span class="required">*</span></label>
                 <input type="text" id="patient-initial" name="patient_initial" required>
